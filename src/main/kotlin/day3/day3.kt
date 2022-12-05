@@ -13,8 +13,8 @@ val testInput = """
 
 class Rucksack(contents: String) {
 
-    private lateinit var compartment1: String
-    private lateinit var compartment2: String
+    private var compartment1: String
+    private var compartment2: String
 
     init {
         val splitInput = contents.length / 2
