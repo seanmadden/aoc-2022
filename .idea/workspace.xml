@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="day13 has a bug">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day15/PuzzleInput.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day15/day15.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day13/day13.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/day13/day13.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="day13" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,7 +51,8 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -58,14 +60,7 @@
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Day13Kt">
-    <configuration name="Day10Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day10.Day10Kt" />
-      <module name="aoc-2022" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.Day15Kt">
     <configuration name="Day11Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day11.Day11Kt" />
       <module name="aoc-2022" />
@@ -94,13 +89,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day15Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day15.Day15Kt" />
+      <module name="aoc-2022" />
+      <shortenClasspath name="NONE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Kotlin.Day11Kt" />
+      <item itemvalue="Kotlin.Day12Kt" />
+      <item itemvalue="Kotlin.Day13Kt" />
+      <item itemvalue="Kotlin.Day14Kt" />
+      <item itemvalue="Kotlin.Day15Kt" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Day15Kt" />
         <item itemvalue="Kotlin.Day13Kt" />
         <item itemvalue="Kotlin.Day14Kt" />
         <item itemvalue="Kotlin.Day12Kt" />
         <item itemvalue="Kotlin.Day11Kt" />
-        <item itemvalue="Kotlin.Day10Kt" />
       </list>
     </recent_temporary>
   </component>
