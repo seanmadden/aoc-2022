@@ -26,68 +26,73 @@ val testInput = """
     [1,[2,[3,[4,[5,6,0]]]],8,9]
 """.trimIndent()
 
-class PacketData(val nodeValue: Int? = null, val parent: PacketData? = null) {
-    private var nodeData: MutableList<PacketData>? = null
+enum class ListOrder {
+    CORRECT,
+    INCORRECT,
+    UNKNOWN
+}
+
+class PacketValue(val value: Int) : PacketData()
+
+class PacketList(val list: MutableList<PacketData> = mutableListOf(), parent: PacketData? = null) :
+    PacketData(parent) {
+
+    fun addValue(packetData: PacketData) {
+        list.add(packetData)
+    }
+}
+
+abstract class PacketData(val parent: PacketData? = null) {
 
     // True if the nodes are in the right order, otherwise false
-    fun compareTo(rightPacket: PacketData, depth: Int = 0): Boolean {
-        println("${"\t".repeat(depth)}Comparing $this vs ${rightPacket}")
+    fun compareTo(rightPacket: PacketData, depth: Int = 0): ListOrder {
+//        println("${"\t".repeat(depth)}Comparing $this vs ${rightPacket}")
 
-        if (nodeValue != null && rightPacket.nodeValue != null) {
-            if (nodeValue < rightPacket.nodeValue) return true
-            if (nodeValue == rightPacket.nodeValue) return true
-            if (nodeValue > rightPacket.nodeValue) return false
+        if (this is PacketValue && rightPacket is PacketValue) {
+            if (value < rightPacket.value) return ListOrder.CORRECT
+            if (value > rightPacket.value) return ListOrder.INCORRECT
+            if (value == rightPacket.value) ListOrder.UNKNOWN
         }
 
+//        if (this is PacketList && this.list.isEmpty()) return ListOrder.CORRECT
 
-        if (nodeData != null && rightPacket.nodeData != null) {
-//            println("Comparing $nodeData to ${rightPacket.nodeData}")
-            return List(nodeData!!.size) { index ->
-                if (index >= rightPacket.nodeData!!.size) return false
-                nodeData!![index].compareTo(rightPacket.nodeData!![index], depth + 1)
+        if (this is PacketList && rightPacket is PacketList) {
+
+            list.mapIndexed { index, packetData ->
+                if (index >= rightPacket.list.size) return ListOrder.INCORRECT
+                val order = packetData.compareTo(rightPacket.list[index])
+                if (order == ListOrder.CORRECT) return ListOrder.CORRECT
+                if (order == ListOrder.INCORRECT) return ListOrder.INCORRECT
             }
-                .reduce { acc, b -> acc && b }
+
+            if (list.size < rightPacket.list.size) {
+                return ListOrder.CORRECT
+            }
+            return ListOrder.UNKNOWN
         }
 
         //if left is list and right is data
-        if (nodeData != null && rightPacket.nodeValue != null) {
-            return nodeData!![0].compareTo(rightPacket, depth + 1)
-            // right side ran out of items, not in correct order
-//            return false
+        if (this is PacketList && rightPacket is PacketValue) {
+            return compareTo(PacketList(mutableListOf(rightPacket)), depth + 1)
         }
 
         //if right is list and left is data
-        if (nodeValue != null && rightPacket.nodeData != null) {
-            // Only have to compare the first element (if left runs out, inputs are in correct order)
-            return compareTo(rightPacket.nodeData!![0], depth + 1)
+        if (this is PacketValue && rightPacket is PacketList) {
+            return PacketList(mutableListOf(this)).compareTo(rightPacket, depth + 1)
         }
 
-        if ((nodeValue != null || nodeData != null) && rightPacket.nodeValue == null) {
-//             Right side ran out, so no go
-            return false
-        }
-
-        if ((rightPacket.nodeValue != null || rightPacket.nodeData != null) && nodeValue == null) {
-            // Left side ran out
-            return true
-        }
-
-        if (rightPacket.nodeValue == null) {
-            return false
-        }
-
-        return false
+        return ListOrder.UNKNOWN
     }
 
     override fun toString(): String {
         val builder = StringBuilder()
 
-        if (nodeValue != null) {
-            return nodeValue.toString()
-        } else if (nodeData != null) {
+        if (this is PacketValue) {
+            return this.value.toString()
+        } else if (this is PacketList) {
             builder.append("[")
-            for (node in nodeData!!) {
-                builder.append(node)
+            for (data in list) {
+                builder.append(data)
                     .append(", ")
             }
             builder.append("]")
@@ -97,36 +102,16 @@ class PacketData(val nodeValue: Int? = null, val parent: PacketData? = null) {
         return "<No packet data>"
     }
 
-    fun addValue(value: Int) {
-        if (nodeValue != null) {
-            throw RuntimeException("Packet data cannot have a node value and a list of values!")
-        }
-        if (nodeData == null) {
-            nodeData = mutableListOf(PacketData(value))
-        } else if (nodeData != null) {
-            nodeData!!.add(PacketData(value))
-        }
-    }
-
-    fun addValue(packetData: PacketData) {
-        if (nodeData == null) {
-            nodeData = mutableListOf(packetData)
-        } else {
-            nodeData!!.add(packetData)
-        }
-
-    }
 }
 
 fun parseLists(line: String): PacketData {
     val iterator = line.iterator()
 
     // every packet is a list
-    val topPacket = PacketData()
+    val topPacket = PacketList()
 
     iterator.next() // The first [
-    var listsDeep = 0
-    var closestPacketData = topPacket
+    var closestPacketData: PacketData = topPacket
 
     while (iterator.hasNext()) {
         var char = iterator.nextChar()
@@ -137,49 +122,27 @@ fun parseLists(line: String): PacketData {
             char = iterator.nextChar()
         }
 
-//        if (char == ',') continue
-
         if (char == '[') {
-            val newPacketData = PacketData(parent = closestPacketData)
-            closestPacketData.addValue(newPacketData)
+            val newPacketData = PacketList(parent = closestPacketData)
+            (closestPacketData as PacketList).addValue(newPacketData)
             closestPacketData = newPacketData
-//            closestPacketData.add(newClosestList)
-//            listsDeep++
-
         }
 
         if (digitBuilder.isNotBlank()) {
-            closestPacketData.addValue(digitBuilder.toString().toInt())
+            (closestPacketData as PacketList).addValue(PacketValue(digitBuilder.toString().toInt()))
         }
 
         if (char == ']') {
             if (closestPacketData.parent == null) {
-//                println("End of the packet")
                 continue
             }
 
             closestPacketData = closestPacketData.parent!!
         }
 
-
     }
 
     return topPacket
-
-//    println(line.split("]"))
-//    println(line.split(","))
-//    val parsedLine = listOf<Any>()
-
-//    var workingList = mutableListOf<Int>()
-
-//    for (char in line) {
-//        if (char == '[') {
-//            workingList = mutableListOf()
-//            continue
-//        }
-
-//        workingList.add(char.digitToInt())
-//    }
 }
 
 fun main(args: Array<String>) {
@@ -191,19 +154,23 @@ fun main(args: Array<String>) {
     var indexCounter = 1
     val correctOrder = mutableListOf<Int>()
 
+    val packets = mutableListOf<PacketData>()
+
     do {
 
         val leftPacket = parseLists(left)
         val rightPacket = parseLists(right)
+        packets.add(leftPacket)
+        packets.add(rightPacket)
 
-        println()
-        println("== Pair $indexCounter ==")
-        val comparison = leftPacket.compareTo(rightPacket)
+//        println()
+//        println("== Pair $indexCounter ==")
+//        val comparison = leftPacket.compareTo(rightPacket)
 
-        println("Comparing left to right: ${comparison}")
-        if (comparison) {
-            correctOrder.add(indexCounter)
-        }
+//        println("Comparing left to right: ${comparison}")
+//        if (comparison == ListOrder.CORRECT) {
+//            correctOrder.add(indexCounter)
+//        }
 
         val blankSpace = iterator.next()
         left = iterator.next()
@@ -213,9 +180,33 @@ fun main(args: Array<String>) {
 
     val leftPacket = parseLists(left)
     val rightPacket = parseLists(right)
+    packets.add(leftPacket)
+    packets.add(rightPacket)
+    val divider1 = PacketList(mutableListOf(PacketList(mutableListOf(PacketValue(2)))))
+    val divider2 = PacketList(mutableListOf(PacketList(mutableListOf(PacketValue(6)))))
+    packets.add(divider1)
+    packets.add(divider2)
 
-    val comparison = leftPacket.compareTo(rightPacket)
-    println("Comparing left to right: ${comparison}")
+//    val comparison = leftPacket.compareTo(rightPacket)
+//    println("Comparing left to right: ${comparison}")
+//
+//    println("Pairs in correct order: ${correctOrder}, sum is ${correctOrder.sum()}")
 
-    println("Pairs in correct order: ${correctOrder}, sum is ${correctOrder.sum()}")
+//    println(packets)
+
+    val sorted = packets.sortedWith(Comparator { packet1, packet2 ->
+        when (packet1.compareTo(packet2)) {
+            ListOrder.CORRECT -> -1
+            ListOrder.INCORRECT -> 1
+            ListOrder.UNKNOWN -> 0
+        }
+    })
+
+    val score = sorted
+//        .filter { it == divider1 || it == divider2 }
+        .mapIndexed { index, packetData ->
+            if (packetData == divider1 || packetData == divider2)  index + 1 else 1
+        }.reduce(Int::times)
+
+    println(score)
 }

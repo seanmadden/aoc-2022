@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="day11">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day13/PuzzleInput.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day13/day13.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/day14/PuzzleInput.kt" afterDir="false" />
+    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="day13 has a bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day13/day13.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/day13/day13.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670945068068</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="day13 has a bug">
+      <created>1671163258802</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671163258802</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +203,8 @@
     <MESSAGE value="day10" />
     <MESSAGE value="day12" />
     <MESSAGE value="day11" />
-    <option name="LAST_COMMIT_MESSAGE" value="day11" />
+    <MESSAGE value="day13 has a bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="day13 has a bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -221,8 +227,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/day13/day13.kt</url>
+          <line>167</line>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/day13/day13.kt</url>
+          <line>50</line>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/day13/day13.kt</url>
           <line>61</line>
-          <option name="timeStamp" value="76" />
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
