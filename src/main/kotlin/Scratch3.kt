@@ -1,0 +1,7 @@
+interface NestedInteger {
+
+}
+
+fun main() {
+
+}
