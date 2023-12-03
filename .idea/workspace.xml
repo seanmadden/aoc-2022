@@ -5,40 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="bunch of days and stuff">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day2/day2.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day3/day3.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Slack.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day1/day1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day1/day1.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day1/puzzleInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day1/puzzleInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day10/PuzzleInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day10/PuzzleInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day10/day10.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day10/day10.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day11/Monkey.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day11/Monkey.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day11/PuzzleInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day11/PuzzleInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day11/day11.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day11/day11.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day13/PuzzleInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day13/PuzzleInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day13/day13.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day13/day13.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day14/PuzzleInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day14/PuzzleInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day15/PuzzleInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day15/PuzzleInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day15/day15.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day15/day15.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day16/day16.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day16/day16.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day16/scratch4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day16/scratch4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day2/day2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day2/day2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day2/puzzleInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day2/puzzleInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day3/day3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day3/day3.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day3/puzzleInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day3/puzzleInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day4/day4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day4/day4.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day4/puzzleInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day4/puzzleInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day5/day5.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day5/day5.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day5/puzzleInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day5/puzzleInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day6/day6.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day6/day6.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day6/puzzleInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day6/puzzleInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day7/day7.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day7/day7.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day7/puzzleInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day7/puzzleInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day8/PuzzleInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day8/PuzzleInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day8/day8.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day8/day8.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day9/day9.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day9/day9.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/day9/puzzleInput.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2022/day9/puzzleInput.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/twentythree/day1/day1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day1/day1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/year2023/day1/day1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day1/day3.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,32 +43,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/sean/IdeaProjects/aoc-2022/src/main/kotlin/year2023/day2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.kotlinCompiler&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.mappings": "true",
+    "WebServerToolWindowPanel.toolwindow.highlight.symlinks": "true",
+    "WebServerToolWindowPanel.toolwindow.show.date": "false",
+    "WebServerToolWindowPanel.toolwindow.show.permissions": "false",
+    "WebServerToolWindowPanel.toolwindow.show.size": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/sean/IdeaProjects/aoc-2022/src/main/kotlin/year2023",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.kotlinCompiler",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/year2023" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/year2023/day2" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/twentythree/day1" />
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
@@ -111,7 +81,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Day2Kt">
+  <component name="RunManager" selected="Kotlin.Day3Kt">
     <configuration name="scratch4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="day16.scratch4" />
       <module name="aoc-2022" />
@@ -139,8 +109,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scratch2Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Scratch2Kt" />
+    <configuration name="Day3Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="year2023.day3.Day3Kt" />
       <module name="aoc-2022" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -155,18 +125,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.scratch4" />
+      <item itemvalue="Kotlin.Day3Kt" />
       <item itemvalue="Kotlin.Day1Kt" />
       <item itemvalue="Kotlin.Day2Kt" />
       <item itemvalue="Kotlin.SlackKt" />
-      <item itemvalue="Kotlin.Scratch2Kt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Day3Kt" />
         <item itemvalue="Kotlin.Day2Kt" />
         <item itemvalue="Kotlin.Day1Kt" />
         <item itemvalue="Kotlin.SlackKt" />
         <item itemvalue="Application.scratch4" />
-        <item itemvalue="Kotlin.Scratch2Kt" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +157,7 @@
       <workItem from="1679001310983" duration="11696000" />
       <workItem from="1701445625215" duration="13000" />
       <workItem from="1701445655679" duration="13068000" />
-      <workItem from="1701484733038" duration="3414000" />
+      <workItem from="1701484733038" duration="11804000" />
     </task>
     <task id="LOCAL-00001" summary="organize">
       <created>1670210081751</created>
@@ -266,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701477664379</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="bunch of days and stuff">
+      <created>1701563518990</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701563518990</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,12 +314,12 @@
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day1/day1.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day1/day3.kt</url>
           <line>1041</line>
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day1/day1.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day1/day3.kt</url>
           <line>1032</line>
           <option name="timeStamp" value="107" />
         </line-breakpoint>
@@ -360,6 +337,11 @@
           <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day2/day2.kt</url>
           <line>193</line>
           <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day3/day3.kt</url>
+          <line>298</line>
+          <option name="timeStamp" value="116" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
