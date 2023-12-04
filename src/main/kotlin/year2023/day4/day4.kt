@@ -258,7 +258,7 @@ class Card(
 }
 
 fun part1(input: MutableList<Card>) {
-    println(input.map { it.getScore() }.sum())
+    println(input.sumOf { it.getScore() })
 }
 
 fun part2(input: MutableList<Card>) {

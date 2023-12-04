@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="day3">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day4/day4.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="day4">
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/year2023/day4/day4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day4/day4.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +149,7 @@
       <workItem from="1679001310983" duration="11696000" />
       <workItem from="1701445625215" duration="13000" />
       <workItem from="1701445655679" duration="13068000" />
-      <workItem from="1701484733038" duration="16514000" />
+      <workItem from="1701484733038" duration="16540000" />
     </task>
     <task id="LOCAL-00001" summary="organize">
       <created>1670210081751</created>
@@ -250,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701625348371</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="day4">
+      <created>1701716010789</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1701716010789</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +286,8 @@
     <MESSAGE value="day15 part1" />
     <MESSAGE value="bunch of days and stuff" />
     <MESSAGE value="day3" />
-    <option name="LAST_COMMIT_MESSAGE" value="day3" />
+    <MESSAGE value="day4" />
+    <option name="LAST_COMMIT_MESSAGE" value="day4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
