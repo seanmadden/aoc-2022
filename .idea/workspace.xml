@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="bunch of days and stuff">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day3/day3.kt" afterDir="false" />
+    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="day3">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day4/day4.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/year2023/day1/day1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day1/day3.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,20 +80,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Day3Kt">
-    <configuration name="scratch4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="day16.scratch4" />
-      <module name="aoc-2022" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="day16.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.Day4Kt (1)">
     <configuration name="Day1Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="twentythree.day1.Day1Kt" />
       <module name="aoc-2022" />
@@ -109,8 +95,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day3Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="year2023.day3.Day3Kt" />
+    <configuration name="Day4Kt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="year2023.day4.Day4Kt" />
+      <module name="aoc-2022" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day4Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="year2023.day3.Day4Kt" />
       <module name="aoc-2022" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,19 +117,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.scratch4" />
-      <item itemvalue="Kotlin.Day3Kt" />
+      <item itemvalue="Kotlin.Day4Kt" />
+      <item itemvalue="Kotlin.Day4Kt (1)" />
       <item itemvalue="Kotlin.Day1Kt" />
       <item itemvalue="Kotlin.Day2Kt" />
       <item itemvalue="Kotlin.SlackKt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.Day3Kt" />
+        <item itemvalue="Kotlin.Day4Kt (1)" />
+        <item itemvalue="Kotlin.Day4Kt" />
         <item itemvalue="Kotlin.Day2Kt" />
         <item itemvalue="Kotlin.Day1Kt" />
         <item itemvalue="Kotlin.SlackKt" />
-        <item itemvalue="Application.scratch4" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +150,7 @@
       <workItem from="1679001310983" duration="11696000" />
       <workItem from="1701445625215" duration="13000" />
       <workItem from="1701445655679" duration="13068000" />
-      <workItem from="1701484733038" duration="11804000" />
+      <workItem from="1701484733038" duration="16514000" />
     </task>
     <task id="LOCAL-00001" summary="organize">
       <created>1670210081751</created>
@@ -243,7 +236,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701563518990</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="day3">
+      <created>1701625265089</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701625265089</updated>
+    </task>
+    <task id="LOCAL-00014" summary="day3">
+      <created>1701625348371</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1701625348371</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +279,8 @@
     <MESSAGE value="day13 has a bug" />
     <MESSAGE value="day15 part1" />
     <MESSAGE value="bunch of days and stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="bunch of days and stuff" />
+    <MESSAGE value="day3" />
+    <option name="LAST_COMMIT_MESSAGE" value="day3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -314,12 +322,12 @@
           <option name="timeStamp" value="84" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day1/day3.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day1/day1.kt</url>
           <line>1041</line>
           <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day1/day3.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day1/day1.kt</url>
           <line>1032</line>
           <option name="timeStamp" value="107" />
         </line-breakpoint>
@@ -337,11 +345,6 @@
           <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day2/day2.kt</url>
           <line>193</line>
           <option name="timeStamp" value="112" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day3/day3.kt</url>
-          <line>298</line>
-          <option name="timeStamp" value="116" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
