@@ -300,8 +300,7 @@ val puzzleInput = """
 """.trimIndent()
 
 class Mapping(val from: String, val to: String) {
-    private val changes = mutableMapOf<LongRange, LongRange>()
-    private var sortedKeys = changes.keys.sortedBy { it.first }
+    private val changes = mutableMapOf<LongRange, (Long) -> Long>()
 
     fun addMapping(destinationRangeStart: Long, sourceRangeStart: Long, rangeLength: Long) {
         // I'm assuming there's no re-mapping going on
@@ -310,17 +309,21 @@ class Mapping(val from: String, val to: String) {
             exitProcess(1)
         }
 
-        changes[LongRange(sourceRangeStart, sourceRangeStart + (rangeLength - 1))] =
-            LongRange(destinationRangeStart, destinationRangeStart + (rangeLength - 1))
+        val difference = if (sourceRangeStart > destinationRangeStart) {
+            -(sourceRangeStart - destinationRangeStart)
+        } else {
+            destinationRangeStart - sourceRangeStart
+        }
 
-        sortedKeys = changes.keys.sortedBy { it.first }
+        changes[LongRange(sourceRangeStart, sourceRangeStart + (rangeLength - 1))] =
+            { value -> value + difference}
     }
 
     fun lookup(place: Long): Long {
         val rangeContainingValue = changes.keys.singleOrNull { it.contains(place) }
 
         if (rangeContainingValue != null) {
-            return changes[rangeContainingValue]!!.elementAt(rangeContainingValue.indexOf(place))
+            return changes[rangeContainingValue]!!.invoke(place)
         }
 
         return place
@@ -352,28 +355,28 @@ fun part1(seeds: List<Long>, mappings: List<Mapping>) {
 
 fun part2(seeds: List<Long>, mappings: List<Mapping>) {
     var valueToLookup = 0L
-    val locations = mutableListOf<Long>()
+    var locations = Long.MAX_VALUE
     val seedRanges = mutableListOf<LongRange>()
 
     seeds.chunked(2).forEach {
         seedRanges.add(LongRange(it[0], it[0] + (it[1] - 1)))
     }
-    for (seedRange in seedRanges) {
+    for ((idx, seedRange) in seedRanges.withIndex()) {
         for (seed in seedRange.first..seedRange.last) {
-            print("Seed $seed -> ")
+//            print("Seed $seed -> ")
             valueToLookup = seed
             for (mapping in mappings) {
-                print("${mapping.to} ${mapping.lookup(valueToLookup)} -> ")
+//                print("${mapping.to} ${mapping.lookup(valueToLookup)} -> ")
                 valueToLookup = mapping.lookup(valueToLookup)
                 if (mapping.to == "location") {
-                    locations.add(valueToLookup)
+                    locations = locations.coerceAtMost(valueToLookup)
                 }
             }
-            println()
+//            println()
         }
     }
 
-    println("Locations are: ${locations.sorted()}")
+    println("lowest location is: $locations")
 }
 
 
@@ -408,5 +411,5 @@ fun main(args: Array<String>) {
 //        println("Adding $lineValues to $currentMapping")
         currentMapping.addMapping(lineValues[0], lineValues[1], lineValues[2])
     }
-    part1(seeds, mappingList)
+    part2(seeds, mappingList)
 }
