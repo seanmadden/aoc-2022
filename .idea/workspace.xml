@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="day5 works but slow">
+    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="much faster">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/year2023/day5/day5.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day5/day5.kt" afterDir="false" />
     </list>
@@ -17,8 +17,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -80,14 +80,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Day5Kt (1)">
-    <configuration name="Day1Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="twentythree.day1.Day1Kt" />
-      <module name="aoc-2022" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Kotlin.OtherKt">
     <configuration name="Day2Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="year2023.day2.Day2Kt" />
       <module name="aoc-2022" />
@@ -116,20 +109,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="OtherKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="year2023.day5.OtherKt" />
+      <module name="aoc-2022" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Kotlin.Day4Kt" />
       <item itemvalue="Kotlin.Day5Kt" />
       <item itemvalue="Kotlin.Day5Kt (1)" />
-      <item itemvalue="Kotlin.Day1Kt" />
+      <item itemvalue="Kotlin.OtherKt" />
       <item itemvalue="Kotlin.Day2Kt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.OtherKt" />
         <item itemvalue="Kotlin.Day5Kt (1)" />
         <item itemvalue="Kotlin.Day5Kt" />
         <item itemvalue="Kotlin.Day4Kt" />
         <item itemvalue="Kotlin.Day2Kt" />
-        <item itemvalue="Kotlin.Day1Kt" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +150,7 @@
       <workItem from="1679001310983" duration="11696000" />
       <workItem from="1701445625215" duration="13000" />
       <workItem from="1701445655679" duration="13068000" />
-      <workItem from="1701484733038" duration="33259000" />
+      <workItem from="1701484733038" duration="39686000" />
     </task>
     <task id="LOCAL-00001" summary="organize">
       <created>1670210081751</created>
@@ -271,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701805889106</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="much faster">
+      <created>1701810159614</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1701810159614</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +310,8 @@
     <MESSAGE value="day3" />
     <MESSAGE value="day4" />
     <MESSAGE value="day5 works but slow" />
-    <option name="LAST_COMMIT_MESSAGE" value="day5 works but slow" />
+    <MESSAGE value="much faster" />
+    <option name="LAST_COMMIT_MESSAGE" value="much faster" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

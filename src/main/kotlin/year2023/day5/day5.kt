@@ -358,6 +358,8 @@ fun part2(seeds: List<Long>, mappings: List<Mapping>) {
     var locations = Long.MAX_VALUE
     val seedRanges = mutableListOf<LongRange>()
 
+    val pipeline =
+
     seeds.chunked(2).forEach {
         seedRanges.add(LongRange(it[0], it[0] + (it[1] - 1)))
     }
@@ -411,5 +413,8 @@ fun main(args: Array<String>) {
 //        println("Adding $lineValues to $currentMapping")
         currentMapping.addMapping(lineValues[0], lineValues[1], lineValues[2])
     }
+    val startTime = System.currentTimeMillis()
     part2(seeds, mappingList)
+    val endTime = System.currentTimeMillis()
+    println("millis elapsed ${endTime - startTime}")
 }
