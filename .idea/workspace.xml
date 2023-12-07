@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="day6">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day7/day7.kt" afterDir="false" />
+    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="day7 part1 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/year2023/day6/day6.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day6/day6.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/year2023/day7/day7.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day7/day7.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +81,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Day6Kt">
+  <component name="RunManager" selected="Kotlin.Day7Kt">
     <configuration name="Day5Kt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="year2023.day5.Day5Kt" />
       <module name="aoc-2022" />
@@ -96,8 +96,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day6Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="year2023.day7.Day6Kt" />
+    <configuration name="Day7Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="year2023.day7.Day7Kt" />
       <module name="aoc-2022" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -120,13 +120,12 @@
     <list>
       <item itemvalue="Kotlin.Day5Kt" />
       <item itemvalue="Kotlin.Day5Kt (1)" />
-      <item itemvalue="Kotlin.Day6Kt" />
       <item itemvalue="Kotlin.Day7Kt" />
       <item itemvalue="Kotlin.OtherKt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.Day6Kt" />
+        <item itemvalue="Kotlin.Day7Kt" />
         <item itemvalue="Kotlin.Day7Kt" />
         <item itemvalue="Kotlin.OtherKt" />
         <item itemvalue="Kotlin.Day5Kt (1)" />
@@ -151,7 +150,7 @@
       <workItem from="1679001310983" duration="11696000" />
       <workItem from="1701445625215" duration="13000" />
       <workItem from="1701445655679" duration="13068000" />
-      <workItem from="1701484733038" duration="46525000" />
+      <workItem from="1701484733038" duration="46920000" />
     </task>
     <task id="LOCAL-00001" summary="organize">
       <created>1670210081751</created>
@@ -293,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701902259660</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="day7 part1 done">
+      <created>1701927586564</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1701927586564</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,7 +333,8 @@
     <MESSAGE value="much faster" />
     <MESSAGE value="add timing" />
     <MESSAGE value="day6" />
-    <option name="LAST_COMMIT_MESSAGE" value="day6" />
+    <MESSAGE value="day7 part1 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="day7 part1 done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
