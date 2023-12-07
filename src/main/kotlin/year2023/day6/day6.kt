@@ -1,4 +1,4 @@
-package year2023.day7
+package year2023.day6
 
 val testInput = """
     Time:      7  15   30

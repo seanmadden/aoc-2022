@@ -1,4 +1,6 @@
-package year2023.day6
+package year2023.day7
+
+import year2022.day1.part2
 
 val testInput = """
     32T3K 765
@@ -1012,6 +1014,25 @@ val puzzleInput = """
 """.trimIndent()
 
 val part2input = """
+    2345A 1
+    Q2KJJ 13
+    Q2Q2Q 19
+    T3T3J 17
+    T3Q33 11
+    2345J 3
+    J345A 2
+    32T3K 5
+    T55J5 29
+    KK677 7
+    KTJJT 34
+    QQQJA 31
+    JJJJJ 37
+    JAAAA 43
+    AAAAJ 59
+    AAAAA 61
+    2AAAA 23
+    2JJJJ 53
+    JJJJ2 41
 """.trimIndent()
 
 fun part1() {
@@ -1034,30 +1055,56 @@ class Hand(val cards: String, val bid: Int) {
 
         if (hand.toSet().size == 2) {
             val c = hand.groupBy { it.value }
-            if (c.values.map { it.size }.contains(4)) {
-                if (c.keys.contains(JACK.value))
-                return HandRank.FOUR_OF_A_KIND
+            if (c.keys.contains(Card.JACK.value)) {
+                // AAJJJ, AAAJJ, AAAAJ, AJJJJ
+                return HandRank.FIVE_OF_A_KIND
             }
 
-            return HandRank.FULL_HOUSE
+            if (c.values.map { it.size }.contains(3)) {
+                return HandRank.FULL_HOUSE
+            }
+
+            return HandRank.FOUR_OF_A_KIND
         }
 
         if (hand.toSet().size == 3) {
             val c = hand.groupBy { it.value }
+
+            if (c.keys.contains(Card.JACK.value)) {
+                if (c[1]!!.size == 2 || c[1]!!.size == 3) {
+                    return HandRank.FOUR_OF_A_KIND
+                }
+                if (c[1]!!.size == 1) {
+                    if (c.values.map { it.size }.any { it == 3 }) {
+                        return HandRank.FOUR_OF_A_KIND
+                    }
+                    return HandRank.FULL_HOUSE
+                }
+            }
+
             if (c.values.map { it.size }.contains(3)) {
                 return HandRank.THREE_OF_A_KIND
             }
+
             return HandRank.TWO_PAIR
         }
 
         if (hand.toSet().size == 4) {
+            val c = hand.groupBy { it.value }
+            if (c.keys.contains(Card.JACK.value)) {
+                return HandRank.THREE_OF_A_KIND
+            }
             return HandRank.ONE_PAIR
         }
 
+        if (hand.contains(Card.JACK)) {
+            return HandRank.ONE_PAIR
+        }
         return HandRank.HIGH_CARD
     }
 
 }
+//wrong: 251670982, 251738096, 252136193, 251945988, 252005312
 
 fun Hand.compareTo(other: Hand): Int {
     if (this.getHandRank() > other.getHandRank()) {
@@ -1139,7 +1186,9 @@ fun main(args: Array<String>) {
 
     var sumOfProducts = 0L
     for ((idx, hand) in hands.withIndex()) {
-        println("Hand ${hand.cards} rank is ${hand.getHandRank()} [${hand.bid} * ${hands.size - idx} = ${hand.bid * (hands.size - idx)}]")
+//        if (hand.hand.contains(Card.JACK)) {
+            println("Hand ${hand.cards} rank is ${hand.getHandRank()} [${hand.bid} * ${hands.size - idx} = ${hand.bid * (hands.size - idx)}]")
+//        }
         sumOfProducts += hand.bid * (hands.size - idx)
     }
 
