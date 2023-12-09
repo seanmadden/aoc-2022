@@ -754,7 +754,7 @@ val test2Input = """
     ZZZ = (ZZZ, ZZZ)
 """.trimIndent()
 
-fun part1(instructions: String, map: Map<String, List<String>>) {
+fun part1(instructions: String, map: Map<String, List<String>>): Int {
     val list = ArrayDeque<Char>()
     list.addAll(instructions.toList())
 
@@ -774,10 +774,10 @@ fun part1(instructions: String, map: Map<String, List<String>>) {
     } while (currentNode != "ZZZ")
 
     println("reached destination in $counter steps")
-
+    return counter
 }
 
-//wrong: 12169 (low),
+//wrong: 12169 (low), 777082813 (low)
 
 fun part2(instructions: String, map: Map<String, List<String>>) {
     val list = ArrayDeque<Char>()
@@ -788,49 +788,52 @@ fun part2(instructions: String, map: Map<String, List<String>>) {
     val seenNodes = hashSetOf<String>()
     seenNodes.addAll(currentNodes)
 
-    var counter = 0L
+    val hops = currentNodes.map {
+        var currentNode = it
+        var counter = 0
 
-    do {
-        val instruction = instructions[(counter % instructions.length).toInt()]
-        counter++
-        currentNodes = currentNodes.map { node ->
-            when (instruction) {
-                'L' -> {
-                    map[node]!![0]
-                }
+        do {
+            val instruction = instructions[counter % instructions.length]
+            counter++
 
-                'R' -> {
-                    map[node]!![1]
-                }
-
-                else -> {
-                    error("unexpected")
-                }
+            if (instruction == 'L') {
+                currentNode = map[currentNode]!![0]
+            } else if (instruction == 'R') {
+                currentNode = map[currentNode]!![1]
             }
-        }
 
-        if (currentNodes.any { seenNodes.contains(it) }) {
-            println("Looping after $counter steps")
-        }
+        } while (!currentNode.endsWith('Z'))
 
-        seenNodes.addAll(currentNodes)
-
-//        if (counter % 100000000 == 0L) {
-//            println("Nodes: ")
-//            currentNodes.forEach {
-//                println("\t$it endsInZ? ${it.endsWith('Z')}")
-//            }
-//        }
-
-    } while (currentNodes.any { !it.endsWith('Z') })
-
-    println("Nodes: ")
-    currentNodes.forEach {
-        println("\t$it ")
+        counter
     }
 
-    println("reached destination in $counter steps")
+    println("Steps to first exit: ${hops}")
+
+    val lcm = findLCMOfListOfNumbers(hops.map { it.toLong() })
+    println("LCM is $lcm")
 }
+
+fun findLCMOfListOfNumbers(numbers: List<Long>): Long {
+    var result = numbers[0]
+    for (i in 1 until numbers.size) {
+        result = findLCM(result, numbers[i])
+    }
+    return result
+}
+
+fun findLCM(a: Long, b: Long): Long {
+    val larger = if (a > b) a else b
+    val maxLcm = a * b
+    var lcm = larger
+    while (lcm <= maxLcm) {
+        if (lcm % a == 0L && lcm % b == 0L) {
+            return lcm
+        }
+        lcm += larger
+    }
+    return maxLcm
+}
+
 
 fun main(args: Array<String>) {
     val input = puzzleInput.split("\n\n")
