@@ -1,7 +1,5 @@
 package year2023.day8
 
-import java.util.LinkedList
-
 val testInput = """
     RL
 
