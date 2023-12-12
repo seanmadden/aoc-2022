@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="day10&#10;&#10;part2 is broke">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day11/day11.kt" afterDir="false" />
+    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="part1, but it doesn't work for part2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/year2023/day11/day11.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day11/day11.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +162,7 @@
       <workItem from="1701445625215" duration="13000" />
       <workItem from="1701445655679" duration="13068000" />
       <workItem from="1701484733038" duration="79385000" />
-      <workItem from="1702259988488" duration="12861000" />
+      <workItem from="1702259988488" duration="15886000" />
     </task>
     <task id="LOCAL-00001" summary="organize">
       <created>1670210081751</created>
@@ -353,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702342364387</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="part1, but it doesn't work for part2">
+      <created>1702346440102</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1702346440102</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +398,8 @@
     <MESSAGE value="day8" />
     <MESSAGE value="day9" />
     <MESSAGE value="day10&#10;&#10;part2 is broke" />
-    <option name="LAST_COMMIT_MESSAGE" value="day10&#10;&#10;part2 is broke" />
+    <MESSAGE value="part1, but it doesn't work for part2" />
+    <option name="LAST_COMMIT_MESSAGE" value="part1, but it doesn't work for part2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -456,6 +464,11 @@
           <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day2/day2.kt</url>
           <line>193</line>
           <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day11/day11.kt</url>
+          <line>215</line>
+          <option name="timeStamp" value="173" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

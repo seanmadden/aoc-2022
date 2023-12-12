@@ -3,7 +3,6 @@ package year2023.day11
 import java.awt.Point
 import java.awt.geom.Point2D
 import kotlin.math.abs
-import kotlin.math.exp
 
 val testInput = """
     ...#......
@@ -195,51 +194,50 @@ fun Point2D.moveTo(otherPoint: Point2D): Int {
 fun main(args: Array<String>) {
     val universe = mutableListOf<StringBuilder>()
 
-    // Expand on horizontal
-    puzzleInput.lines().forEachIndexed { idx, line ->
-        if (line.contains('#')) {
-            universe.add(StringBuilder(line))
-        } else {
-            universe.add(StringBuilder(line))
-            universe.add(StringBuilder(line))
-        }
-    }
-
-    val transposedUniverse = universe.transpose()
-
-    // Expand on vertical:
-    universe.clear()
-    transposedUniverse.forEachIndexed { idx, line ->
-        if (line.contains('#')) {
-            universe.add(StringBuilder(line))
-        } else {
-            universe.add(StringBuilder(line))
-            universe.add(StringBuilder(line))
-        }
-    }
-
-    // transpose again
-    val expandedUniverse = universe.transpose()
     val galaxySet = mutableListOf<Point2D>()
+    for ((idx, line) in puzzleInput.lines().withIndex()) {
+        val currentLine = StringBuilder()
 
-    for ((idx, line) in expandedUniverse.withIndex()) {
         for ((jdx, char) in line.withIndex()) {
             if (char == '#') {
                 println("Galaxy found at $idx, $jdx")
                 galaxySet.add(Point(idx, jdx))
             }
+            currentLine.append(char)
         }
+        universe.add(currentLine)
+    }
+
+    val transposedUniverse = universe.transpose()
+
+    val offsetGalaxySet = mutableListOf<Point2D>()
+    for ((idx, galaxy) in galaxySet.withIndex()) {
+        // count empty rows above
+        val xOffset = if (galaxy.x > 0) {
+            universe.subList(0, galaxy.x.toInt()).count { !it.contains('#') }
+        } else 0
+
+        //count empty rows to the left
+        val yOffset = if (galaxy.y > 0) {
+            transposedUniverse.subList(0, galaxy.y.toInt()).count { !it.contains('#') }
+        } else 0
+
+        println("galaxy ${idx + 1} at (${galaxy.x}, ${galaxy.y}) has $xOffset empty rows to the left, and $xOffset empty rows above it")
+        val newX = galaxy.x.toInt() + ((xOffset * (1_000_000 - 1)))
+        val newY = galaxy.y.toInt() + ((yOffset * (1_000_000 - 1)))
+        println("galaxy ${idx + 1} new location (${newX},$newY)")
+        offsetGalaxySet.add(Point(newX, newY))
     }
 
     val distances = mutableListOf<Int>()
-    for ((idx, firstPoint) in galaxySet.withIndex()) {
-        for ((jdx, secondPoint) in galaxySet.subList(idx, galaxySet.size).withIndex()) {
+    for ((idx, firstPoint) in offsetGalaxySet.withIndex()) {
+        for ((jdx, secondPoint) in offsetGalaxySet.subList(idx, offsetGalaxySet.size).withIndex()) {
             println("Distance between points ${idx + 1} and ${jdx + idx + 1} is ${firstPoint.moveTo(secondPoint)}")
             distances.add(firstPoint.moveTo(secondPoint))
         }
     }
 
-    println("Sum of all distances ${distances.sum()}")
+    println("Sum of all distances ${distances.fold(0L) { acc, it -> acc + it.toLong()}}")
 
     val startTime = System.currentTimeMillis()
 
