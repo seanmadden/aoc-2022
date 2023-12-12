@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="part1, but it doesn't work for part2">
+    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="part2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/year2023/day11/day11.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day11/day11.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/year2023/day10/day10.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day10/day10.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Day11Kt">
+  <component name="RunManager" selected="Kotlin.Day10Kt">
     <configuration name="Day10Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="year2023.day10.Day10Kt" />
       <module name="aoc-2022" />
@@ -136,8 +136,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.Day11Kt" />
         <item itemvalue="Kotlin.Day10Kt" />
+        <item itemvalue="Kotlin.Day11Kt" />
         <item itemvalue="Kotlin.Day8Kt" />
         <item itemvalue="Kotlin.Day7Kt (1)" />
         <item itemvalue="Kotlin.Day7Kt" />
@@ -162,7 +162,7 @@
       <workItem from="1701445625215" duration="13000" />
       <workItem from="1701445655679" duration="13068000" />
       <workItem from="1701484733038" duration="79385000" />
-      <workItem from="1702259988488" duration="15886000" />
+      <workItem from="1702259988488" duration="18885000" />
     </task>
     <task id="LOCAL-00001" summary="organize">
       <created>1670210081751</created>
@@ -360,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702346440102</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="part2">
+      <created>1702349434730</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1702349434730</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +406,8 @@
     <MESSAGE value="day9" />
     <MESSAGE value="day10&#10;&#10;part2 is broke" />
     <MESSAGE value="part1, but it doesn't work for part2" />
-    <option name="LAST_COMMIT_MESSAGE" value="part1, but it doesn't work for part2" />
+    <MESSAGE value="part2" />
+    <option name="LAST_COMMIT_MESSAGE" value="part2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

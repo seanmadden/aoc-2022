@@ -172,6 +172,43 @@ val test2Input = """
     LJ...
 """.trimIndent()
 
+val part2TestInput2 = """
+    ...........
+    .S-------7.
+    .|F-----7|.
+    .||.....||.
+    .||.....||.
+    .|L-7.F-J|.
+    .|..|.|..|.
+    .L--J.L--J.
+    ...........
+""".trimIndent()
+
+val part2TestInput3 = """
+    ..........
+    .S------7.
+    .|F----7|.
+    .||....||.
+    .||....||.
+    .|L-7F-J|.
+    .|..||..|.
+    .L--JL--J.
+    ..........
+""".trimIndent()
+
+val part2TestInput4 = """
+    .F----7F7F7F7F-7....
+    .|F--7||||||||FJ....
+    .||.FJ||||||||L7....
+    FJL7L7LJLJ||LJ.L-7..
+    L--J.L7...LJS7F-7L7.
+    ....F-J..F7FJ|L7L7L7
+    ....L7.F7||L7|.L7L7|
+    .....|FJLJ|FJ|F7|.LJ
+    ....FJL-7.||.||||...
+    ....L---J.LJ.LJLJ...
+""".trimIndent()
+
 fun part1other() {
 }
 
@@ -269,7 +306,7 @@ fun getOpposite(direction: Direction): Direction {
 // Too high: 616, 392
 // wrong: 73
 fun main(args: Array<String>) {
-    val problemInput = puzzleInput
+    val problemInput = part2TestInput4
 
     var startingTile = Tile(0, 0, mutableMapOf(), 'x')
     for ((row, line) in problemInput.lines().withIndex()) {
@@ -354,6 +391,7 @@ fun main(args: Array<String>) {
 
     } while (!seen.contains(Pair(nextSquare.x, nextSquare.y)))
 
+    // left to right
     var map = mutableListOf(StringBuilder())
     for ((row, line) in problemInput.lines().withIndex()) {
         var insidePipeline = false
@@ -365,9 +403,9 @@ fun main(args: Array<String>) {
                 thisLine.append('x')
             } else {
                 if (insidePipeline) {
-                    thisLine.append('?')
+                    thisLine.append('I')
                 } else {
-                    thisLine.append('.')
+                    thisLine.append('?')
                 }
             }
         }
@@ -375,6 +413,28 @@ fun main(args: Array<String>) {
     }
 
     map = map.filter { it.toString().isNotBlank() }.toMutableList()
+
+    // right to left
+    for (i in map.size - 1  downTo 0) {
+        var insidePipeline = false
+        for (j in map[0].length - 1 downTo 0) {
+            if (map[i][j] == 'x') {
+                insidePipeline = !insidePipeline
+                map[i].setCharAt(j, 'x')
+            } else {
+                val currentChar = map[i][j]
+                if (insidePipeline) {
+                    if (currentChar == 'I') {
+                        map[i].setCharAt(j, 'I')
+                    } else {
+                        map[i].setCharAt(j, '?')
+                    }
+                } else {
+//                    map[i].setCharAt(j, '.')
+                }
+            }
+        }
+    }
 
     // Top to bottom
     for (i in 0 until map[0].length) {
@@ -386,9 +446,9 @@ fun main(args: Array<String>) {
             } else {
                 if (map[j][i] == '?') {
                     if (insidePipeline) {
-                        map[j].setCharAt(i, '?')
+                        map[j].setCharAt(i, 'I')
                     } else {
-                        map[j].setCharAt(i, '.')
+//                        map[j].setCharAt(i, '.')
                     }
                 }
             }
@@ -407,35 +467,19 @@ fun main(args: Array<String>) {
                     if (insidePipeline) {
                         map[j].setCharAt(i, '?')
                     } else {
-                        map[j].setCharAt(i, '.')
+//                        map[j].setCharAt(i, '.')
                     }
                 }
             }
         }
     }
 
-    // right to left
-    for (i in map.size - 1  downTo 0) {
-        var insidePipeline = false
-        for (j in map[0].length - 1 downTo 0) {
-            if (map[i][j] == 'x') {
-                insidePipeline = !insidePipeline
-                map[i].setCharAt(j, 'x')
-            } else {
-                if (map[i][j] == '?') {
-                    if (insidePipeline) {
-                        map[i].setCharAt(j, 'z')
-                    } else {
-                        map[i].setCharAt(j, '.')
-                    }
-                }
-            }
-        }
-    }
 
     for (line in map) {
         println(line)
     }
+
+    println("Sum of inside tiles is ${map.map { it.count { it == '?' } }.sum()}")
 
     val startTime = System.currentTimeMillis()
 
