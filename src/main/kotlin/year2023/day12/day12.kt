@@ -1,9 +1,5 @@
 package year2023.day12
 
-import java.awt.Point
-import java.awt.geom.Point2D
-import kotlin.math.abs
-
 val testInput = """
     ???.### 1,1,3
     .??..??...?##. 1,1,3
