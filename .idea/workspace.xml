@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="part2">
+    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="still broken day10">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day12/day12.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/year2023/day10/day10.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2023/day10/day10.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Day10Kt">
+  <component name="RunManager" selected="Kotlin.Day12Kt">
     <configuration name="Day10Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="year2023.day10.Day10Kt" />
       <module name="aoc-2022" />
@@ -99,14 +99,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day7Kt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="year2023.day7.Day7Kt" />
+    <configuration name="Day12Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="year2023.day12.Day12Kt" />
       <module name="aoc-2022" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day7Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+    <configuration name="Day7Kt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="year2023.day7.Day7Kt" />
       <module name="aoc-2022" />
       <method v="2">
@@ -129,18 +129,18 @@
     </configuration>
     <list>
       <item itemvalue="Kotlin.Day11Kt" />
+      <item itemvalue="Kotlin.Day12Kt" />
       <item itemvalue="Kotlin.Day10Kt" />
-      <item itemvalue="Kotlin.Day7Kt" />
       <item itemvalue="Kotlin.Day7Kt (1)" />
       <item itemvalue="Kotlin.Day8Kt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Day12Kt" />
         <item itemvalue="Kotlin.Day10Kt" />
         <item itemvalue="Kotlin.Day11Kt" />
         <item itemvalue="Kotlin.Day8Kt" />
         <item itemvalue="Kotlin.Day7Kt (1)" />
-        <item itemvalue="Kotlin.Day7Kt" />
       </list>
     </recent_temporary>
   </component>
@@ -162,7 +162,7 @@
       <workItem from="1701445625215" duration="13000" />
       <workItem from="1701445655679" duration="13068000" />
       <workItem from="1701484733038" duration="79385000" />
-      <workItem from="1702259988488" duration="18885000" />
+      <workItem from="1702259988488" duration="22115000" />
     </task>
     <task id="LOCAL-00001" summary="organize">
       <created>1670210081751</created>
@@ -367,7 +367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702349434730</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="still broken day10">
+      <created>1702357405932</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1702357405932</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +414,8 @@
     <MESSAGE value="day10&#10;&#10;part2 is broke" />
     <MESSAGE value="part1, but it doesn't work for part2" />
     <MESSAGE value="part2" />
-    <option name="LAST_COMMIT_MESSAGE" value="part2" />
+    <MESSAGE value="still broken day10" />
+    <option name="LAST_COMMIT_MESSAGE" value="still broken day10" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -477,6 +485,11 @@
           <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day11/day11.kt</url>
           <line>215</line>
           <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/year2023/day12/day12.kt</url>
+          <line>41</line>
+          <option name="timeStamp" value="174" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
