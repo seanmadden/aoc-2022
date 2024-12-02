@@ -1,5 +1,7 @@
 package year2023.day10
 
+import Direction
+
 val testInput = """
     -L|F7
     7S-7|
@@ -216,12 +218,6 @@ fun part2(values: List<Long>) {
 }
 
 
-enum class Direction {
-    NORTH,
-    SOUTH,
-    EAST,
-    WEST
-}
 
 class Tile(
     val x: Int,
