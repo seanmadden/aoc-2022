@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="day1">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2024/day3/day3.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2024/day3/input.kt" afterDir="false" />
+    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="day3">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2024/day4/day4.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,9 +16,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -63,6 +62,7 @@
     "Kotlin.Day1Kt.executor": "Run",
     "Kotlin.Day2Kt.executor": "Debug",
     "Kotlin.Day3Kt.executor": "Run",
+    "Kotlin.Day4Kt.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -75,7 +75,7 @@
     "WebServerToolWindowPanel.toolwindow.show.size": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/sean/IdeaProjects/aoc-2022/src/main/kotlin/year2024/day3",
+    "last_opened_file_path": "/Users/sean/IdeaProjects/aoc-2022/src/main/kotlin/year2024/day4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,11 +90,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/year2024/day4" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/year2024/day3" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/year2024/day2" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/year2024/day1" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/year2023" />
-      <recent name="$PROJECT_DIR$/src/main/kotlin/year2023/day2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/kotlin/year2023/day9" />
@@ -105,16 +105,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Day3Kt">
+  <component name="RunManager" selected="Kotlin.Day4Kt">
     <configuration name="Day12Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="year2023.day12.Day12Kt" />
-      <module name="aoc-2022" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Day14Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="year2023.day14.Day14Kt" />
       <module name="aoc-2022" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -163,20 +156,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day4Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="year2024.day4.Day4Kt" />
+      <module name="aoc-2022" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Kotlin.Day12Kt" />
+      <item itemvalue="Kotlin.Day14Kt" />
       <item itemvalue="Kotlin.Day3Kt" />
+      <item itemvalue="Kotlin.Day4Kt" />
       <item itemvalue="Kotlin.Day2Kt" />
       <item itemvalue="Kotlin.Day1Kt" />
-      <item itemvalue="Kotlin.Day14Kt" />
       <item itemvalue="Kotlin.Day15Kt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Day4Kt" />
         <item itemvalue="Kotlin.Day3Kt" />
         <item itemvalue="Kotlin.Day2Kt" />
         <item itemvalue="Kotlin.Day1Kt" />
         <item itemvalue="Kotlin.Day15Kt" />
-        <item itemvalue="Kotlin.Day14Kt" />
       </list>
     </recent_temporary>
   </component>
@@ -214,7 +216,8 @@
       <workItem from="1733078147685" duration="1514000" />
       <workItem from="1733158349416" duration="1068000" />
       <workItem from="1733159427544" duration="123000" />
-      <workItem from="1733159562255" duration="8209000" />
+      <workItem from="1733159562255" duration="13925000" />
+      <workItem from="1733357835786" duration="3205000" />
     </task>
     <task id="LOCAL-00001" summary="organize">
       <created>1670210081751</created>
@@ -471,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733181574369</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="day3">
+      <option name="closed" value="true" />
+      <created>1733238997960</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1733238997960</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,7 +504,6 @@
     <MESSAGE value="day13 has a bug" />
     <MESSAGE value="day15 part1" />
     <MESSAGE value="bunch of days and stuff" />
-    <MESSAGE value="day3" />
     <MESSAGE value="day4" />
     <MESSAGE value="day5 works but slow" />
     <MESSAGE value="much faster" />
@@ -514,7 +524,8 @@
     <MESSAGE value="broken day14" />
     <MESSAGE value="day 1/2 of 2024" />
     <MESSAGE value="day1" />
-    <option name="LAST_COMMIT_MESSAGE" value="day1" />
+    <MESSAGE value="day3" />
+    <option name="LAST_COMMIT_MESSAGE" value="day3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -602,11 +613,6 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="JetRunConfigurationType">
-        <watch expression="match.groups[0]!!.value" language="kotlin" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
