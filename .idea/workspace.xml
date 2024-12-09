@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="day 4">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2024/day5/day5.kt" afterDir="false" />
+    <list default="true" id="9f47cfe8-4d3b-4eb4-ae39-c5b6e5408390" name="Changes" comment="day 5">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/lib/Grid.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/year2024/day6/day6.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/year2024/day4/day4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/year2024/day4/day4.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +66,7 @@
     "Kotlin.Day3Kt.executor": "Run",
     "Kotlin.Day4Kt.executor": "Run",
     "Kotlin.Day5Kt.executor": "Run",
+    "Kotlin.Day6Kt.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -106,16 +109,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.Day5Kt">
+  <component name="RunManager" selected="Kotlin.Day6Kt">
     <configuration name="Day15Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="year2023.day15.Day15Kt" />
-      <module name="aoc-2022" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Day1Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="year2024.day1.Day1Kt" />
       <module name="aoc-2022" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -150,20 +146,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day6Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="year2024.day6.Day6Kt" />
+      <module name="aoc-2022" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Kotlin.Day5Kt" />
+      <item itemvalue="Kotlin.Day6Kt" />
       <item itemvalue="Kotlin.Day3Kt" />
       <item itemvalue="Kotlin.Day4Kt" />
       <item itemvalue="Kotlin.Day2Kt" />
-      <item itemvalue="Kotlin.Day1Kt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Day6Kt" />
         <item itemvalue="Kotlin.Day5Kt" />
         <item itemvalue="Kotlin.Day4Kt" />
         <item itemvalue="Kotlin.Day3Kt" />
         <item itemvalue="Kotlin.Day2Kt" />
-        <item itemvalue="Kotlin.Day1Kt" />
       </list>
     </recent_temporary>
   </component>
@@ -202,7 +205,7 @@
       <workItem from="1733158349416" duration="1068000" />
       <workItem from="1733159427544" duration="123000" />
       <workItem from="1733159562255" duration="13925000" />
-      <workItem from="1733357835786" duration="9228000" />
+      <workItem from="1733357835786" duration="13903000" />
     </task>
     <task id="LOCAL-00001" summary="organize">
       <created>1670210081751</created>
@@ -475,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733361077022</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="day 5">
+      <option name="closed" value="true" />
+      <created>1733500145193</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1733500145193</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -493,7 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="day13 has a bug" />
     <MESSAGE value="day15 part1" />
     <MESSAGE value="bunch of days and stuff" />
     <MESSAGE value="day4" />
@@ -518,7 +528,8 @@
     <MESSAGE value="day1" />
     <MESSAGE value="day3" />
     <MESSAGE value="day 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="day 4" />
+    <MESSAGE value="day 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="day 5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

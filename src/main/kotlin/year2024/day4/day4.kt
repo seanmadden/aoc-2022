@@ -1,6 +1,7 @@
 package year2024.day4
 
-import kotlin.system.exitProcess
+import lib.Cell
+import lib.Direction
 
 val testInput = """
     MMMSXXMASM
@@ -15,71 +16,39 @@ val testInput = """
     MXMXAXMASX
 """.trimIndent()
 
-enum class Direction {
-    NORTH,
-    NORTHEAST,
-    EAST,
-    SOUTHEAST,
-    SOUTH,
-    SOUTHWEST,
-    WEST,
-    NORTHWEST
-}
-
-class Cell(val letter: Char) {
-    val exits = mutableMapOf<Direction, Cell>()
-
-    fun addExit(direction: Direction, cell: Cell) {
-        if (exits.contains(direction)) {
-            error("Exit already exists, this shouldn't happen!")
-            exitProcess(1)
-        }
-
-        exits.put(direction, cell)
-    }
-
-    fun traverse(direction: Direction): Cell {
-        return exits[direction] ?: Cell('.')
-    }
-
-    fun canGetToXmasByDirection(): Int {
-        var count = 0
-        if (letter == 'X') {
-            for (entry in exits) {
-                if (entry.value.letter == 'M') {
-                    val nextLetter = entry.value.traverse(entry.key)
-                    if (nextLetter.letter == 'A') {
-                        val nextLetter = nextLetter.traverse(entry.key)
-                        if (nextLetter.letter == 'S') {
-                            count++
-                        }
+fun Cell.canGetToXmasByDirection(): Int {
+    var count = 0
+    if (letter == 'X') {
+        for (entry in exits) {
+            if (entry.value.letter == 'M') {
+                val nextLetter = entry.value.traverse(entry.key)
+                if (nextLetter.letter == 'A') {
+                    val nextLetter = nextLetter.traverse(entry.key)
+                    if (nextLetter.letter == 'S') {
+                        count++
                     }
                 }
             }
         }
-        return count
     }
+    return count
+}
 
-    fun canGetXCross(): Boolean {
-        if (letter == 'A') {
-            val exitLetter = "" + traverse(Direction.NORTHWEST).letter +
-                    letter +
-                    traverse(Direction.SOUTHEAST).letter +
-                    traverse(Direction.SOUTHWEST).letter +
-                    letter +
-                    traverse(Direction.NORTHEAST).letter
-            val firstHalf = exitLetter.substring(0, 3)
-            val secondHalf = exitLetter.substring(3, 6)
-            if ((firstHalf == "MAS" || firstHalf == "SAM") && (secondHalf == "MAS" || secondHalf == "SAM")) {
-                return true
-            }
+fun Cell.canGetXCross(): Boolean {
+    if (letter == 'A') {
+        val exitLetter = "" + traverse(Direction.NORTHWEST).letter +
+                letter +
+                traverse(Direction.SOUTHEAST).letter +
+                traverse(Direction.SOUTHWEST).letter +
+                letter +
+                traverse(Direction.NORTHEAST).letter
+        val firstHalf = exitLetter.substring(0, 3)
+        val secondHalf = exitLetter.substring(3, 6)
+        if ((firstHalf == "MAS" || firstHalf == "SAM") && (secondHalf == "MAS" || secondHalf == "SAM")) {
+            return true
         }
-        return false
     }
-
-    override fun toString(): String {
-        return letter.toString()
-    }
+    return false
 }
 
 fun part1(cells: List<List<Cell>>) {
