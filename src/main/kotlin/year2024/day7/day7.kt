@@ -23,6 +23,20 @@ class Equation(val target: Long, val inputs: List<Long>) {
             sum + remainingInputs.first(),
             remainingInputs.subList(1, remainingInputs.size)
         )
+
+        return times
+    }
+
+    fun canGetTargetRecursivePartTwo(sum: Long, remainingInputs: List<Long>): Boolean {
+        if (sum == target && remainingInputs.isEmpty()) return true
+        if (remainingInputs.isEmpty()) return false
+
+        var times =
+            canGetTargetRecursive(sum * remainingInputs.first(), remainingInputs.subList(1, remainingInputs.size))
+        times = times || canGetTargetRecursive(
+            sum + remainingInputs.first(),
+            remainingInputs.subList(1, remainingInputs.size)
+        )
         times = times || canGetTargetRecursive(
             (sum.toString() + remainingInputs.first().toString()).toLong(),
             remainingInputs.subList(1, remainingInputs.size)
@@ -55,7 +69,23 @@ fun part1(equations: List<Equation>) {
     println(sum)
 }
 
-fun part2() {
+fun part2(equations: List<Equation>) {
+    val valid = mutableListOf<Equation>()
+    equations.forEach {
+        val canGetThere = it.canGetTargetRecursivePartTwo(it.inputs.first(), it.inputs.subList(1, it.inputs.size))
+        println("Equation $it: $canGetThere")
+
+        if (canGetThere) {
+            valid.add(it)
+        }
+    }
+
+    var sum = 0L
+    for (validEquation in valid) {
+        sum += validEquation.target
+    }
+
+    println(sum)
 }
 
 fun main(args: Array<String>) {
@@ -69,6 +99,5 @@ fun main(args: Array<String>) {
         equations.add(Equation(target, inputs))
     }
 
-    //5346692558392 too low
-    part1(equations)
+    part2(equations)
 }
